@@ -10,7 +10,7 @@
                                    <img src="~/assets/img/default-avatar.jpg" alt="">
                             </nuxt-link>
                               
-                                <div class="info">
+                              <div class="info">
                                    <nuxt-link class="name" to="name">
                                            琳泳
                                    </nuxt-link>
@@ -25,7 +25,7 @@
                                           <span class="likes-count"> 喜欢 179</span>
                                           <span class="rewords-count">赞赏 2</span>
                                    </div>
-                                </div>
+                            </div>
                             
                         </div>
                             <div class="show-content">
@@ -73,8 +73,11 @@
                                      可我知道，我没那么“完美”！
 
                                               </p>
-                                </div>
-                                <div class="show-foot">
+                            </div>
+                            
+                 </div>
+                 <!-- 底部分类信息和版权 -->
+                     <div class="show-foot">
                                    <nuxt-link to="/note/123" class="notebook">
                                            <i class="fa fa-book"></i>
                                            日记本
@@ -82,13 +85,61 @@
                                    <div class="copyright">
                                             © 著作权归作者所有     
                                    </div>
-                                </div>
-                 </div>
+                     </div>
+                     <!-- 文章底部信息 -->
+                     <div class="follow-detail">
+                         <div class="avatar">
+                           
+                                <img src="~/assets/img/default-avatar.jpg" alt="">
+
+                          </div>
+                               <a href="#" class="btn-follow">
+                                 <i class="fa fa-plus"></i>
+                                 <span>关注</span>
+                               </a>
+                               <nuxt-link class="title" to="/u/123">
+                                       琳泳
+                               </nuxt-link>
+                               <i class="fa fa-venus"></i>
+                               <p>
+                                 写了 30923 字，被 73 人关注，获得了 299 个喜欢
+                               </p>
+                        
+                     </div>
+                     <!-- 更多分享 -->
+                     <div class="meta-bottom">
+                           <div class="like">
+                                 <div class="like-btn">
+                                       <a href="#">喜欢</a>
+                                 </div>
+                                 <div class="like-num">
+                                       <a href="#">50</a>
+                                 </div>
+                           </div>
+                           <div class="share">
+                                <a href="#" class="share-btn">
+                                  <i class="fa fa-weixin weixin"></i>
+                                </a>
+                                 <a href="#" class="share-btn">
+                                  <i class="fa fa-weibo weibo"></i>
+                                </a>
+                                 <a href="#" class="share-btn">
+                                  <i class="fa fa-qq qq"></i>
+                                </a>
+                                 <a href="#" class="share-btn more-share">
+                                    更多分享
+                                </a>
+                           </div>
+                     </div>
+                     <!-- 留言组件 -->
+                     <my-comment></my-comment>
+                      
              </div>
         </div>
     </div>
 </template>
 <script>
+import myComment from '~/components/myComment'
 import myHeader from "~/components/myHeader";
 export default {
   head: {
@@ -105,7 +156,8 @@ export default {
     };
   },
   components: {
-    myHeader
+    myHeader,
+    myComment
   }
 };
 </script>

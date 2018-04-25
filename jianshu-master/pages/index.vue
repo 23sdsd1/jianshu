@@ -248,7 +248,7 @@
                                  
                               </li>
                          </ul>
-                         <nuxt-link to="/" class="find-more">
+                         <nuxt-link to="/" class="more-share">
                               <p>查看全部></p>
                          </nuxt-link>
                      </div>

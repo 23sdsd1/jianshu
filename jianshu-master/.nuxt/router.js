@@ -3,10 +3,10 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _0def1f42 = () => import('..\\pages\\sign-up.vue' /* webpackChunkName: "pages_sign-up" */).then(m => m.default || m)
-const _0d4e6e68 = () => import('..\\pages\\sign-in.vue' /* webpackChunkName: "pages_sign-in" */).then(m => m.default || m)
-const _7148f803 = () => import('..\\pages\\p\\_id.vue' /* webpackChunkName: "pages_p__id" */).then(m => m.default || m)
-const _fba8e8ae = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
+const _d8b46b74 = () => import('..\\pages\\sign-up.vue' /* webpackChunkName: "pages_sign-up" */).then(m => m.default || m)
+const _7f0f73d0 = () => import('..\\pages\\sign-in.vue' /* webpackChunkName: "pages_sign-in" */).then(m => m.default || m)
+const _4c4edc7f = () => import('..\\pages\\p\\_id.vue' /* webpackChunkName: "pages_p__id" */).then(m => m.default || m)
+const _064db0a6 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
 
@@ -68,22 +68,22 @@ export function createRouter () {
     routes: [
 		{
 			path: "/sign-up",
-			component: _0def1f42,
+			component: _d8b46b74,
 			name: "sign-up"
 		},
 		{
 			path: "/sign-in",
-			component: _0d4e6e68,
+			component: _7f0f73d0,
 			name: "sign-in"
 		},
 		{
 			path: "/p/:id?",
-			component: _7148f803,
+			component: _4c4edc7f,
 			name: "p-id"
 		},
 		{
 			path: "/",
-			component: _fba8e8ae,
+			component: _064db0a6,
 			name: "index"
 		}
     ],
