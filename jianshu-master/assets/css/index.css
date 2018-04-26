@@ -413,6 +413,68 @@
     border: 1px solid #ea6f5a;
     border-radius: 40px;
 }
+/* .note .post .meta-bottom .like1{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ea6f5a;
+    border-radius: 40px;
+    background-color: #EA6F5A;
+}
+.note .post .meta-bottom .like1 .like-btn{
+    display: inline-block;
+    padding: 13px 0 15px 0;
+   
+}
+
+.note .post .meta-bottom .like1 .like-btn:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 12px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/heart.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1000px 50px;
+    transition: all .5s steps(19);
+
+    
+}
+.note .post .meta-bottom .like1 .like-btn a{
+    padding: 18px 30px 18px 55px;
+    color: #FFFEFE;
+}
+.note .post .meta-bottom .like1 .like-num {
+    display: inline-block;
+    font-size: 18px;
+    border-left: 1px solid #FFFEFE;
+}
+.note .post .meta-bottom .like1 .like-num a{
+    padding:  18px 26px 18px 18px;
+    color: #FFFEFE;
+} */
+ .islike{
+     background: #ea6f5a!important;
+ }
+ .islike a {
+     color: #fff!important;
+ }
+ .islike .like-num {
+     border-left:1px solid #fff!important;
+ }
+ .islike .like-btn:before{
+   animation: changeLike .6s steps(19) forwards;
+ }
+ @keyframes changeLike {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+ }
+
 .note .post .meta-bottom .like:hover{
     background: rgb(254,246,247);
 }
@@ -433,6 +495,7 @@
     background-position: left;
     background-repeat: no-repeat;
     background-size: 1000px 50px;
+    /* transition: all .5s steps(19); */
 
     
 }
@@ -451,6 +514,7 @@
     color: #ea6f5a;
 }
 .note .post .meta-bottom .share{
+    position: relative;
     float: right;
     margin-top: 5px;
 }
@@ -490,3 +554,118 @@
     text-align: center;
     color: #9b9b9b;
 }
+.note .post .meta-bottom .share .share-tip {
+    position: absolute;
+    margin-left: -23px;
+    top: -40px;
+}
+.note .post .meta-bottom .share .share-tip .share-weixin{
+    /* width: 100px; */
+    padding: 0 10px;
+    height: 30px;
+    background: black;
+    border-radius: 5px;
+    text-align: center;
+}
+.note .post .meta-bottom .share .share-tip .share-weixin p{
+    display: inline-block;
+    line-height: 10px;
+    font-size: 14px;
+    color: white;
+}
+.note .post .meta-bottom .share .share-tip #triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 7px solid black;
+    margin-left: 45%;
+}
+.note .post .meta-bottom .share .share-tip1{
+    position: absolute;
+    margin-left: 32px;
+    top: -40px;
+}
+.note .post .meta-bottom .share .share-tip1 .share-weibo{
+    /* width: 100px; */
+    padding: 0 10px;
+    height: 30px;
+    background: black;
+    border-radius: 5px;
+    text-align: center;
+}
+.note .post .meta-bottom .share .share-tip1 #triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 7px solid black;
+    margin-left: 45%;
+}
+.note .post .meta-bottom .share .share-tip1 .share-weibo p{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: white;
+    line-height: 10px;
+}
+
+.note .post .meta-bottom .share .share-tip2{
+    position: absolute;
+    margin-left: 85px;
+    top: -40px;
+}
+.note .post .meta-bottom .share .share-tip2 .share-qq{
+    /* width: 100px; */
+    padding: 0 10px;
+    height: 30px;
+    background: black;
+    border-radius: 5px;
+    text-align: center;
+}
+.note .post .meta-bottom .share .share-tip2 #triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 7px solid black;
+    margin-left: 45%;
+}
+.note .post .meta-bottom .share .share-tip2 .share-qq p{
+    display: inline-block;
+    line-height: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.note .post .meta-bottom .share .share-tip3{
+    position: absolute;
+    margin-left: 135px;
+    top: -160px;
+    /* display: none; */
+   
+}
+.note .post .meta-bottom .share .share-tip3 .share-more{
+    width: 150px;
+    /* height: 1px; */
+    background:  white;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 2px #888888 ;
+}
+.note .post .meta-bottom .share .share-tip3 #triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 16px solid white;
+    margin-left: 65px;
+    /* box-shadow: 10px  5px #888888; */
+}
+.note .post .meta-bottom .share .share-tip3 .share-more ul li{
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* .note .post .meta-bottom .share .more-share:focus ~ .share-tip3{
+  display: block;
+} */

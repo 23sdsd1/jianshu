@@ -108,26 +108,59 @@
                      </div>
                      <!-- 更多分享 -->
                      <div class="meta-bottom">
-                           <div class="like">
+                           <div class="like"  :class="{'islike':islike}" @click="islike=!islike">
                                  <div class="like-btn">
-                                       <a href="#">喜欢</a>
+                                       <a href="####" return false>喜欢</a>
                                  </div>
                                  <div class="like-num">
-                                       <a href="#">50</a>
+                                       <a href="####" return false>50</a>
                                  </div>
                            </div>
                            <div class="share">
-                                <a href="#" class="share-btn">
+                                <div class="share-tip" v-show="tip">
+                                 <div class="share-weixin">
+                                    <p>分享到微信</p>
+                                 </div>
+                                 <div id="triangle-down"></div>
+                                </div>
+                                <a href="#" class="share-btn" @mouseover="tip=true" @mouseleave="tip=false">
                                   <i class="fa fa-weixin weixin"></i>
                                 </a>
+                                 <div class="share-tip1" v-show="tip1">
+                                  <div class="share-weibo">
+                                    <p>分享到微博</p>
+                                  </div>
+                                  <div id="triangle-down"></div>
+                                </div>
                                  <a href="#" class="share-btn">
-                                  <i class="fa fa-weibo weibo"></i>
+                                  <i class="fa fa-weibo weibo" @mouseover="tip1=true" @mouseleave="tip1=false"></i>
                                 </a>
+
+                                 <div class="share-tip2" v-show="tip2">
+                                  <div class="share-qq">
+                                    <p>下载长微博图片</p>
+                                  </div>
+                                  <div id="triangle-down"></div>
+                                </div>
                                  <a href="#" class="share-btn">
-                                  <i class="fa fa-qq qq"></i>
+                                  <i class="fa fa-qq qq" @mouseover="tip2=true" @mouseleave="tip2=false"></i>
                                 </a>
-                                 <a href="#" class="share-btn more-share">
-                                    更多分享
+
+                                <div class="share-tip3" >
+                                  <div class="share-more">
+                                    <ul>
+                                       <li>分享到qq空间</li>
+                                       <li>分享到Twitter</li>
+                                       <li>分享到Facebook</li>
+                                       <li>分享到Google+</li>
+                                       <li>分享到豆瓣</li>
+                                    </ul>
+                                  </div>
+                                  <div id="triangle-down"></div>
+                                </div>
+                                 <a href="#" class="share-btn more-share" @click="getfocus">
+                                   更多分享
+                                   
                                 </a>
                            </div>
                      </div>
@@ -152,12 +185,32 @@ export default {
   },
   data() {
     return {
-        
+        islike:false,
+        tip:false,
+        tip1:false,
+        tip2:false
     };
   },
   components: {
     myHeader,
-    myComment
+    myComment,
+  },
+ methods:{
+      getfocus:function(){
+             var focus = document.querySelector('.more-share').focus()
+             focus.style.color = 'red'
+      },
+         
+
+      
+     losefoucs:function(){
+          document.querySelector('.more-share').blur()  
+      }
   }
 };
 </script>
+
+<style>
+
+
+</style>
