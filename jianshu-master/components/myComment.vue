@@ -273,7 +273,7 @@ export default {
 .comment-list .new-comment .write-function-block {
   height: 50px;
 }
-.comment-list .new-comment .write-function-block .emoji {
+.comment-list .new-comment .write-function-block .emoji-a {
   float: left;
   margin-top: 14px;
 }

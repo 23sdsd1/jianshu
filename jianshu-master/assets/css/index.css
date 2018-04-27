@@ -554,118 +554,51 @@
     text-align: center;
     color: #9b9b9b;
 }
-.note .post .meta-bottom .share .share-tip {
-    position: absolute;
-    margin-left: -23px;
-    top: -40px;
-}
-.note .post .meta-bottom .share .share-tip .share-weixin{
-    /* width: 100px; */
-    padding: 0 10px;
-    height: 30px;
-    background: black;
-    border-radius: 5px;
-    text-align: center;
-}
-.note .post .meta-bottom .share .share-tip .share-weixin p{
-    display: inline-block;
-    line-height: 10px;
-    font-size: 14px;
-    color: white;
-}
-.note .post .meta-bottom .share .share-tip #triangle-down {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 7px solid black;
-    margin-left: 45%;
-}
-.note .post .meta-bottom .share .share-tip1{
-    position: absolute;
-    margin-left: 32px;
-    top: -40px;
-}
-.note .post .meta-bottom .share .share-tip1 .share-weibo{
-    /* width: 100px; */
-    padding: 0 10px;
-    height: 30px;
-    background: black;
-    border-radius: 5px;
-    text-align: center;
-}
-.note .post .meta-bottom .share .share-tip1 #triangle-down {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 7px solid black;
-    margin-left: 45%;
-}
-.note .post .meta-bottom .share .share-tip1 .share-weibo p{
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 14px;
-    color: white;
-    line-height: 10px;
-}
 
-.note .post .meta-bottom .share .share-tip2{
-    position: absolute;
-    margin-left: 85px;
-    top: -40px;
-}
-.note .post .meta-bottom .share .share-tip2 .share-qq{
-    /* width: 100px; */
-    padding: 0 10px;
-    height: 30px;
-    background: black;
-    border-radius: 5px;
-    text-align: center;
-}
-.note .post .meta-bottom .share .share-tip2 #triangle-down {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 7px solid black;
-    margin-left: 45%;
-}
-.note .post .meta-bottom .share .share-tip2 .share-qq p{
-    display: inline-block;
-    line-height: 10px;
-    font-size: 14px;
-    color: white;
-}
 
-.note .post .meta-bottom .share .share-tip3{
+.wrapper{
+    padding: 10px;
+    /* background-color: red; */
+    position: relative;
+    top:-200px;
+
+    
+}
+.share-list{
+    /* border: 1px solid black; */
+}
+.popover-arrow{
+   /* margin-top: 200px; */
+   background-color: red;
+   display: none;
+   top: 200px;
+
+}
+.fa-star-half-o{
+    color: #ECCF69;
+}
+.fa-twitter{
+    color: #0EAEEE;
+}
+.fa-facebook-official{
+    color: #4460A0;
+}
+.fa-google-plus{
+ color: #FA6051;
+}
+.fa-hand-peace-o{
+
+}
+.trangle{
     position: absolute;
-    margin-left: 135px;
-    top: -160px;
-    /* display: none; */
-   
-}
-.note .post .meta-bottom .share .share-tip3 .share-more{
-    width: 150px;
-    /* height: 1px; */
-    background:  white;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 2px 2px 2px #888888 ;
-}
-.note .post .meta-bottom .share .share-tip3 #triangle-down {
     width: 0;
     height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 16px solid white;
-    margin-left: 65px;
-    /* box-shadow: 10px  5px #888888; */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    /* border-top: 12px solid red; */
+    top: -20px;
+    z-index: 100000;
 }
-.note .post .meta-bottom .share .share-tip3 .share-more ul li{
-    font-size: 16px;
-    line-height: 1.6;
+.wrapper .share-list  li {
+    font-size: 14px;
 }
-/* .note .post .meta-bottom .share .more-share:focus ~ .share-tip3{
-  display: block;
-} */

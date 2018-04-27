@@ -116,53 +116,48 @@
                                        <a href="####" return false>50</a>
                                  </div>
                            </div>
+                           
                            <div class="share">
-                                <div class="share-tip" v-show="tip">
-                                 <div class="share-weixin">
-                                    <p>分享到微信</p>
-                                 </div>
-                                 <div id="triangle-down"></div>
-                                </div>
-                                <a href="#" class="share-btn" @mouseover="tip=true" @mouseleave="tip=false">
+                                <a href="#" class="share-btn" v-tooltip="'分享到微信'">
                                   <i class="fa fa-weixin weixin"></i>
                                 </a>
-                                 <div class="share-tip1" v-show="tip1">
-                                  <div class="share-weibo">
-                                    <p>分享到微博</p>
-                                  </div>
-                                  <div id="triangle-down"></div>
-                                </div>
-                                 <a href="#" class="share-btn">
-                                  <i class="fa fa-weibo weibo" @mouseover="tip1=true" @mouseleave="tip1=false"></i>
+                                 <a href="#" class="share-btn" v-tooltip="'分享到微博'">
+                                  <i class="fa fa-weibo weibo"></i>
                                 </a>
-
-                                 <div class="share-tip2" v-show="tip2">
-                                  <div class="share-qq">
-                                    <p>下载长微博图片</p>
-                                  </div>
-                                  <div id="triangle-down"></div>
-                                </div>
-                                 <a href="#" class="share-btn">
-                                  <i class="fa fa-qq qq" @mouseover="tip2=true" @mouseleave="tip2=false"></i>
+                                 <a href="#" class="share-btn" v-tooltip="'分享到QQ'">
+                                  <i class="fa fa-qq qq"></i>
                                 </a>
-
-                                <div class="share-tip3" >
-                                  <div class="share-more">
-                                    <ul>
-                                       <li>分享到qq空间</li>
-                                       <li>分享到Twitter</li>
-                                       <li>分享到Facebook</li>
-                                       <li>分享到Google+</li>
-                                       <li>分享到豆瓣</li>
-                                    </ul>
-                                  </div>
-                                  <div id="triangle-down"></div>
-                                </div>
-                                 <a href="#" class="share-btn more-share" @click="getfocus">
-                                   更多分享
-                                   
-                                </a>
+                                 
+                            
+                                 <a class="share-btn more-share">
+                        <v-popover>
+                        <a href="javascript:void(0)"  tooltip-target b3>
+                            更多分享
+                        </a>
+                        <template slot="popover">
+                           <ul class="share-list">
+                               <li>
+                                   <i class="fa fa-star-half-o"></i>
+                                   分享到QQ空间</li>
+                               <li>
+                                   <i class="fa fa-twitter"></i>
+                                   分享到Twitter</li>
+                               <li>
+                                   <i class="fa fa-facebook-official"></i>
+                                   分享到Facebook</li>
+                               <li>
+                                   <i class="fa fa-google-plus"></i>
+                                   分享到Google+</li>
+                               <li>
+                                   <i class="fa fa-hand-peace-o"></i>
+                                   分享到豆瓣</li>
+                           </ul>
+    
+                         </template>
+                        </v-popover>
+                        </a>
                            </div>
+                           
                      </div>
                      <!-- 留言组件 -->
                      <my-comment></my-comment>
@@ -186,14 +181,11 @@ export default {
   data() {
     return {
         islike:false,
-        tip:false,
-        tip1:false,
-        tip2:false
     };
   },
   components: {
     myHeader,
-    myComment,
+    myComment
   },
  methods:{
       getfocus:function(){
